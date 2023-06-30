@@ -10,6 +10,8 @@ This is my third repository and it's also my third project. I have built a simpl
 * Article
 * Video
 * Simple form
+* Simple animation and transition
+* Box Shadow and Text Shadow
 
 ## What I learn from this week?
 A lot of thing I learn this week!
@@ -17,6 +19,8 @@ A lot of thing I learn this week!
 * Animation CSS
 * Responsive CSS
 * Advance CSS Styling
+* Animation and Transition
+* Shadow
 * Styling with SEO and Accessibility score over 90 in Lighthouse
 
 Checkout this project here!
