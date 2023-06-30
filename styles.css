@@ -3,11 +3,16 @@
     padding: 0;
     font-family: "Roboto", sans-serif;
     scroll-behavior: smooth;
-}
+    }
 
 body {
     background-color: white;
     color: #111
+}
+
+@font-face {
+    font-family: "Arcon";
+    src: url("font/Arcon-Rounded-Regular.otf") format("opentype");
 }
 
 .dark-mode {
@@ -181,6 +186,14 @@ nav .hamburger {
     opacity: 0;
 }
 
+.full-screen h1 {
+    text-shadow: 0px -5px 5px black, 0px -10px 10px #111, 0px -13px 15px #666 ;
+}
+
+.full-screen-dark-mode h1 {
+    text-shadow: 0px -5px 5px white, 0px -10px 10px #666, 0px -13px 15px darkgrey ;
+}
+
 @keyframes fadeup {
     0% {
         transform: translateY(100%);
@@ -196,6 +209,7 @@ nav .hamburger {
     font-size: 3em;
     animation: fadedown 2s forwards;
     opacity: 0;
+    font-family: 'Arcon';
 }
 
 @keyframes fadedown {
@@ -234,16 +248,15 @@ h2 {
     background-color: #999;
     color: white;
     filter: grayscale(1);
-    transition: 1.5s;
+    transition: 1s;
 }
 
 .item:hover {
     filter: grayscale(0);
-    transform: scale(1.05);
+    transform: scale(1.04);
     z-index: 1;
-    border-radius: 30px;
+    border-radius: 15px;
     box-shadow: 5px 5px 30px 1px #111;
-
 }
 
 #one {
@@ -318,6 +331,7 @@ article figure img {
     height: 400px;
     width: fit-content;
     border-radius: 15px;
+    margin: 16px;
 }
 
 #section-video {
