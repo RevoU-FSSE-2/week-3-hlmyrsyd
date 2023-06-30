@@ -8,7 +8,7 @@
     >
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalim Site</title>
+    <title>Minimalist Club</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="responsive" href="responsive.css">
     <script src="script.js"></script>
@@ -16,24 +16,29 @@
 <body>
     <nav>
         <span class="nav-logo">
-            <strong><a href="https://github.com/hlmyrsyd" target="_blank">Code by hlmyrsyd</a></strong>
+            <strong><a href="https://github.com/hlmyrsyd" target="_blank">&copy; Code by hlmyrsyd</a></strong>
         </span>
         <a onclick="myFunction()" class="dark-mode-btn" >
-            <img src="img/dark-mode-icon.svg" b>
+            <img src="img/dark-mode-icon.svg" alt="dark mode icon" />
         </a>
         <ul class="nav-menu">
-            <li><a href="#">Photo</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Join Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section-photo">Photo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section-article">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#section-form">Join Us</a></li>
         </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
     <header class="full-screen" id="header">
         <h1>Minimalism</h1>
         <p>The one way ticket to peace</p>
     </header>
-    <section class="photo-section">
-        <h2>Minimalist</h2>
-        <div class="container">
+    <section id="section-photo">
+        <h2>Minimalist.<em>Ideas</em></h2>
+        <div class="grid-container">
             <div class="item" id="one">Neat</div>
             <div class="item" id="two">Productive</div>
             <div class="item" id="three">Clean</div>
@@ -43,13 +48,16 @@
         </div>
     </section>
     <section id="section-article">
-        <h2>Facts About Minimalist</h2>
+        <h2><em>About</em>.Minimalist</h2>
         <article>
             <hgroup>
+                <h2>What is it?</h2>
+                <br>
                 <p>
                 You might expect that when you become a minimalist, you’ll have less stuff and more space, 
                 but there are a few surprising things you can look forward to as well.
                 </p>
+                <br>
                 <ul>
                     <li>Become Friendlier</li>
                     <li>Silence is Appealing</li>
@@ -66,13 +74,12 @@
                     Minimalist <em>interior design</em> photo
                 </figcaption>
             </figure>
-            
         </article>
     </section>
     <section id="section-video">
-        <h2>Minimalist Rules</h2>
+        <h2>Minimalist.<em>Rules</em></h2>
         <iframe 
-            width="1440"
+            width="100%"
             src="https://www.youtube.com/embed/T-L9eBXJNHs" 
             title="6 Rules for Minimalist Interiors" 
             frameborder="0" 
@@ -82,16 +89,18 @@
     </section>
     <section id="section-form">
         <form>
-            <h2>Join The Minimalist Club</h2>
+            <br>
+            <h2><em>Join</em>.Minimalist</h2>
+            <br>
             <fieldset>
-                <legend>Personal Data</legend>
+                <legend><b>Personal Data</b></legend>
                 <div class="fullname">
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="fname" value="" placeholder="First name here!" required/>
+                    <input type="text" id="fname" name="fname" value="" placeholder="  First name here!" autocomplete="name" required/>
                     <label for="lname">First Name</label>
-                    <input type="text" id="lname" name="lname" value="" placeholder="Last name here!" required/>
+                    <input type="text" id="lname" name="lname" value="" placeholder="  Last name here!"  autocomplete="name" required/>
                     <label for="mail">Email</label>
-                    <input type="email" id="email" name="email" value="" placeholder="Email here!" required/>
+                    <input type="email" id="email" name="email" value="" placeholder="  Email here!" autocomplete="email" required/>
                 </div>
                 <p>Are you ready to become minimalist person</p>
                 <div class="readyorno">
@@ -101,20 +110,22 @@
                     <label for="no">No</label>
                 </div>
             </fieldset>
+            <br>
             <fieldset>
-                <legend>Additional Infrmation</legend>
-                <p>What do you think about minimalim</p>
+                <legend><b>Additional Information</b></legend>
+                <p>What do you think about minimalism</p>
+                <br>
                 <div class="aboutminimalist">
                     <input type="checkbox" id="Simple" name="minimalistCharacter" value="Simple"/>
-                    <label for="yes">Simple</label>
+                    <label for="simple">Simple</label>
                     <input type="checkbox" id="Clean" name="minimalistCharacter" value="Clean"/>
-                    <label for="no">Clean</label>
+                    <label for="clean">Clean</label>
                     <input type="checkbox" id="Fascinating" name="minimalistCharacter" value="Fascinating"/>
-                    <label for="no">Fascinating</label>
+                    <label for="fascinating">Fascinating</label>
                 </div>
                 <div class="textarea">
                     <p>Tell us why do you want to join us?</p>
-                    <textarea rows="3"></textarea>
+                    <textarea rows="6"  placeholder=" Reason why you want to Join us" required></textarea>
                 </div>
                 <div class="uploadImage">
                     <p>Upload your favorite minimalist picture here:</p>
@@ -124,5 +135,8 @@
             <button type="submit">submit</button>
         </form>
     </section>
+    <footer>
+        <p> &copy;Copyright @hlmyrsyd 2023</p>
+    </footer>
 </body>
 </html>

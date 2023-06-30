@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -24,6 +25,7 @@ nav {
     align-items: center;
     height: 60px;
     width: 100%;
+    z-index: 2;
 }
 
 nav .nav-logo {
@@ -81,6 +83,73 @@ nav .nav-menu li a:hover {
     transition: .3s;
     color: whitesmoke;
 }
+
+nav .hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 5px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    nav .dark-mode-btn {
+        position: inherit;
+        display: flex;
+        left: 0;
+        right: 0;
+        width: 0%;
+        margin: 0 50%;
+        justify-content: center;
+    }
+    
+    nav .nav-menu {
+        position: fixed;
+        left: -102%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        border-radius: 0px;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    nav .nav-menu.active {
+        left: 0;
+    }
+
+    nav .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    nav .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    nav .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    nav .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
 /* nav end */
 /* header start */
 .full-screen {
@@ -107,14 +176,55 @@ nav .nav-menu li a:hover {
 
 .full-screen p {
     margin-bottom: 400px;
+    font-size: 1.3em;
+    animation: fadeup 5s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeup {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.full-screen h1 {
+    font-size: 3em;
+    animation: fadedown 2s forwards;
+    opacity: 0;
+}
+
+@keyframes fadedown {
+    0% {
+        transform: translatey(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translatey(0);
+        opacity: 1;
+    }
 }
 /* header end */
+
 /* photo section start */
-.container {
+h2 {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+    font-size: 2em;
+}
+
+.grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 600px);
     grid-gap: 8px;
+    font-size: 2em;
+    font
 }
 
 .item {
@@ -123,6 +233,16 @@ nav .nav-menu li a:hover {
     justify-content: center;
     background-color: #999;
     color: white;
+    filter: grayscale(1);
+    transition: 1.5s;
+}
+
+.item:hover {
+    filter: grayscale(0);
+    transform: scale(1.05);
+    z-index: 1;
+    border-radius: 30px;
+    box-shadow: 5px 5px 30px 1px #111;
 
 }
 
@@ -167,19 +287,25 @@ nav .nav-menu li a:hover {
     background-position: center;
     background-size: cover;
 }
-/* photo section end */
 
-#section-article {
-    width: 100%;
+@media screen and (max-width:768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 500px);
+        grid-gap: 8px;
+    }
+
 }
+/* photo section end */
 
 article {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin: 16px;
+    align-items: center;    
+    margin: 0 16px;
+    padding: 30px;
 }
 
 article figure {
@@ -217,13 +343,14 @@ form {
 }
 
 fieldset {
-    border-radius: 15px;
+    border-radius: 10px;
+    border-style: none;
 }
 
 .fullname input {
     width: 100%;
     height: 35px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .readyorno {
@@ -233,7 +360,7 @@ fieldset {
 
 textarea {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 button {
@@ -251,3 +378,8 @@ button :hover {
     cursor: pointer;
 }
 /* form end */
+
+footer p {
+    display: flex;
+    justify-content: center;
+}
