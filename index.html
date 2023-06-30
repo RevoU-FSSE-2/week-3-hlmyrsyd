@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta 
+    name="description"
+    content="A web application to show minimalism in interior"
+    >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalim Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="responsive" href="responsive.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <span class="nav-logo">
+            <strong><a href="https://github.com/hlmyrsyd" target="_blank">Code by hlmyrsyd</a></strong>
+        </span>
+        <a onclick="myFunction()" class="dark-mode-btn" >
+            <img src="img/dark-mode-icon.svg" b>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="#">Photo</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Join Us</a></li>
+        </ul>
+    </nav>
+    <header class="full-screen" id="header">
+        <h1>Minimalism</h1>
+        <p>The one way ticket to peace</p>
+    </header>
+    <section class="photo-section">
+        <h2>Minimalist</h2>
+        <div class="container">
+            <div class="item" id="one">Neat</div>
+            <div class="item" id="two">Productive</div>
+            <div class="item" id="three">Clean</div>
+            <div class="item" id="four">Active</div>
+            <div class="item" id="five">Consistent</div>
+            <div class="item" id="six">Dress Well</div>
+        </div>
+    </section>
+    <section id="section-article">
+        <h2>Facts About Minimalist</h2>
+        <article>
+            <hgroup>
+                <p>
+                You might expect that when you become a minimalist, you’ll have less stuff and more space, 
+                but there are a few surprising things you can look forward to as well.
+                </p>
+                <ul>
+                    <li>Become Friendlier</li>
+                    <li>Silence is Appealing</li>
+                    <li>Better Decision</li>
+                    <li>Healthier Lifestyle</li>
+                </ul>
+            </hgroup>
+            <figure>
+                <img 
+                src="https://i.pinimg.com/564x/be/a3/35/bea335ca9de64106ae5788a2de67b088.jpg" 
+                alt=""
+                />
+                <figcaption>
+                    Minimalist <em>interior design</em> photo
+                </figcaption>
+            </figure>
+            
+        </article>
+    </section>
+    <section id="section-video">
+        <h2>Minimalist Rules</h2>
+        <iframe 
+            width="1440"
+            src="https://www.youtube.com/embed/T-L9eBXJNHs" 
+            title="6 Rules for Minimalist Interiors" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </section>
+    <section id="section-form">
+        <form>
+            <h2>Join The Minimalist Club</h2>
+            <fieldset>
+                <legend>Personal Data</legend>
+                <div class="fullname">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" value="" placeholder="First name here!" required/>
+                    <label for="lname">First Name</label>
+                    <input type="text" id="lname" name="lname" value="" placeholder="Last name here!" required/>
+                    <label for="mail">Email</label>
+                    <input type="email" id="email" name="email" value="" placeholder="Email here!" required/>
+                </div>
+                <p>Are you ready to become minimalist person</p>
+                <div class="readyorno">
+                    <input type="radio" id="yes" name="becomeMinimalist" value="yes"/>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="becomeMinimalist" value="no"/>
+                    <label for="no">No</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Additional Infrmation</legend>
+                <p>What do you think about minimalim</p>
+                <div class="aboutminimalist">
+                    <input type="checkbox" id="Simple" name="minimalistCharacter" value="Simple"/>
+                    <label for="yes">Simple</label>
+                    <input type="checkbox" id="Clean" name="minimalistCharacter" value="Clean"/>
+                    <label for="no">Clean</label>
+                    <input type="checkbox" id="Fascinating" name="minimalistCharacter" value="Fascinating"/>
+                    <label for="no">Fascinating</label>
+                </div>
+                <div class="textarea">
+                    <p>Tell us why do you want to join us?</p>
+                    <textarea rows="3"></textarea>
+                </div>
+                <div class="uploadImage">
+                    <p>Upload your favorite minimalist picture here:</p>
+                    <input type="file" id="photo" name="myMinimalistPhoto" required accept="image/png, image/jpeg, image/jpg" />
+                </div>
+            </fieldset>
+            <button type="submit">submit</button>
+        </form>
+    </section>
+</body>
+</html>
