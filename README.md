@@ -9,7 +9,7 @@ This is my third repository and it's also my third project. I have built a simpl
 * Dark Mode
 * Article
 * Video
-* Simple form
+* Simple Id form
 * Simple animation and transition
 * Box Shadow and Text Shadow
 
@@ -20,7 +20,7 @@ A lot of thing I learn this week!
 * Responsive CSS
 * Advance CSS Styling
 * Animation and Transition
-* Shadow
+* Box Shadow
 * Styling with SEO and Accessibility score over 90 in Lighthouse
 
 Checkout this project here!
