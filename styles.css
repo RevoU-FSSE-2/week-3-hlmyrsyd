@@ -5,19 +5,77 @@
     scroll-behavior: smooth;
     }
 
-body {
-    background-color: white;
-    color: #111
-}
-
 @font-face {
     font-family: "Arcon";
     src: url("font/Arcon-Rounded-Regular.otf") format("opentype");
 }
 
+body {
+    background-color: white;
+    color: #111
+}
+
+/* transitions start */
+
+h2 {
+    transition: .3s;
+}
+
+h2:hover {
+    scale: 1.2;
+    cursor: pointer;
+}
+
+.marquee-w {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 140px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.marquee {
+    position: absolute;
+    display: block;
+    margin: auto auto;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 100%;
+    height: 100%;
+}
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    font-family: 'Arcon';
+    text-align: center;
+    -webkit-text-stroke: 1px #333;
+    white-space: nowrap;
+    min-width: 100%;
+    height: 100%;
+    line-height: 140px;
+    font-size: 85px;
+    animation: marquee 20s linear infinite;
+}
+.marquee2 span {
+    animation-delay: 10s;
+}
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+/* transitions end */
+
 .dark-mode {
     background-color: #111;
     color: white;
+    transition: .5s;
 }
 
 /* nav start */
@@ -311,7 +369,7 @@ h2 {
 
 }
 /* photo section end */
-
+/* article section start */
 article {
     display: flex;
     flex-direction: row;
@@ -332,8 +390,15 @@ article figure img {
     width: fit-content;
     border-radius: 15px;
     margin: 16px;
+    transition: .5s;
 }
 
+article figure img:hover {
+    scale: 1.2;
+    transform: rotate(5deg);
+}
+/* article section end */
+/* video section start */
 #section-video {
     display: flex;
     flex-direction: column;
@@ -351,7 +416,8 @@ iframe {
     height: 50vh;
     border-radius: 30px;
 }
-
+/* video section end */
+/* form section start */
 form {
     max-width: 480px;
 }
@@ -391,7 +457,7 @@ button :hover {
     background-color: #111;
     cursor: pointer;
 }
-/* form end */
+/* form section end */
 
 footer p {
     display: flex;

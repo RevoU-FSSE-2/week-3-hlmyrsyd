@@ -25,7 +25,8 @@ A lot of thing I learn this week!
 
 Checkout this project here!
 Click [here](https://hlmyrsyd2.netlify.app/)
+ps: try hover around and find the secret animation
 
 Checkout my other project also at!
-Click [First Week](https://hlmyrsyd.netlify.app/)
-Click [Second Week](https://hlmyrsyd1.netlify.app/)
+[First Week](https://hlmyrsyd.netlify.app/) and
+[Second Week](https://hlmyrsyd1.netlify.app/)
